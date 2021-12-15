@@ -1,0 +1,41 @@
+{
+  "name": "typeorm-explain",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write src",
+    "type-check": "tsc --noEmit",
+    "build:types": "tsc --emitDeclarationOnly",
+    "build:cjs": "tsc -m commonjs --declarationDir lib --outDir lib",
+    "build:esm": "tsc -m esNext --declarationDir esm --outDir esm",
+    "build": "npm run build:types && npm run build:cjs && npm run build:esm",
+    "lint": "eslint src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zamarawka/typeorm-explain.git"
+  },
+  "keywords": [
+    "typeorm",
+    "explain"
+  ],
+  "author": "zamarawka <somebody.told@mail.ru> (https://github.com/zamarawka)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zamarawka/typeorm-explain/issues"
+  },
+  "homepage": "https://github.com/zamarawka/typeorm-explain#readme",
+  "peerDependencies": {
+    "typeorm": "~0.2.41"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.7.0",
+    "@typescript-eslint/parser": "^5.7.0",
+    "eslint": "^8.4.1",
+    "prettier": "^2.5.1",
+    "typeorm": "^0.2.41",
+    "typescript": "^4.5.4"
+  }
+}
